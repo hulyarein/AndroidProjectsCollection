@@ -20,7 +20,7 @@
             android:gravity="right"
             android:paddingRight="20dp"
             android:text="0"
-            android:textSize="20dp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/txtAnswer"
@@ -30,14 +30,15 @@
             android:paddingRight="20dp"
             android:text="0"
             android:textColor="@color/black"
-            android:textSize="42dp" />
+            android:textSize="48sp" />
 
         <Button
             android:id="@+id/btnClear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Clear" />
+            android:text="Clear"
+            android:textSize="24sp" />
 
         <TableLayout
             android:layout_width="fill_parent"
@@ -63,6 +64,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/seven"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -73,6 +75,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/eight"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -83,6 +86,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:text="@string/nine"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -93,6 +97,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/divide"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
             </TableRow>
 
@@ -109,6 +114,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="4"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -119,6 +125,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/five"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -129,6 +136,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/six"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -139,6 +147,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/multiply"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
             </TableRow>
@@ -156,6 +165,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/one"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -166,6 +176,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/two"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -176,6 +187,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/three"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -186,6 +198,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/sub"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
             </TableRow>
 
@@ -202,6 +215,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/dot"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -212,6 +226,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/zero"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -222,6 +237,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/add"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
 
                 <Button
@@ -232,6 +248,7 @@
                     android:layout_marginLeft="0dp"
                     android:layout_weight="1"
                     android:text="@string/equal"
+                    android:textSize="24sp"
                     app:cornerRadius="50dp" />
             </TableRow>
         </TableLayout>

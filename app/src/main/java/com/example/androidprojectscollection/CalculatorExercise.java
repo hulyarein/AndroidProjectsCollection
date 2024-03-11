@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -270,14 +271,21 @@ public class CalculatorExercise extends AppCompatActivity {
         btnDot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (txtEquation.getText().toString().equals("0")) {
-                    txtEquation.setText(btnDot.getText().toString());
-                } else {
-                    txtEquation.append(btnDot.getText().toString());
+                if (temp.charAt(temp.length()-1) == '.') {
+                    temp = temp.substring(0,temp.length()-1);
+                    return;
+                }
+                for (int i = 0; i < temp.length(); i++){
+                    if (temp.charAt(i) == '.'){
+                        return;
+                    }
+
                 }
 
-                txtAnswer.setText(btnDot.getText().toString());
+                temp += ".";
 
+              //  txtEquation.setText(temp);
+                txtAnswer.setText(temp);
             }
         });
 
@@ -286,13 +294,25 @@ public class CalculatorExercise extends AppCompatActivity {
         btnEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                equation.add(temp);
-                temp = "";
-                Calculator cal = new Calculator(equation);
-                temp = cal.calEvaluate();
+                try {
+                    if (!temp.equals("")){
+                        equation.add(temp);
+                    } else {
+                        equation.remove(equation.size()-1);
+                    }
 
-                txtEquation.setText(temp);
-                txtAnswer.setText(temp);
+                    temp = "";
+                    Calculator cal = new Calculator(equation);
+                    temp = cal.calEvaluate();
+                    equation.clear();
+
+                    txtEquation.setText(temp);
+                    txtAnswer.setText(temp);
+                } catch (Exception e){
+                    Toast.makeText(CalculatorExercise.this,
+                            "Invalid Operation!", Toast.LENGTH_LONG).show();
+                }
+
 
 
             }
