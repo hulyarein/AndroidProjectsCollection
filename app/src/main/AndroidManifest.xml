@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AndroidProjectsCollection"
         tools:targetApi="31">
         <activity
+            android:name=".Connect3"
+            android:exported="false" />
+        <activity
             android:name=".CalculatorExercise"
             android:exported="false" />
         <activity

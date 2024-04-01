@@ -6,10 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1;
+    Button btn1, btnCon;
     Button btn2,btn3, btnCal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+        btnCon = (Button) findViewById(R.id.btnConnect);
+
+        btnCon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Connect3.class);
+                startActivity(intent);
+                Toast toast = Toast.makeText(MainActivity.this, "Julia Laine Segundo Batch 1", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
 
     }
 }

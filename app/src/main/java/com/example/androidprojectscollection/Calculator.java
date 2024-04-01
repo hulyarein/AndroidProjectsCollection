@@ -6,11 +6,14 @@ import java.util.Stack;
 public class Calculator {
     Stack <String> stack;
     ArrayList <String> postfix = new ArrayList<>();
-
+    ArrayList <String> str = new ArrayList<>();
     public Calculator(ArrayList<String> str) {
         stack = new Stack<>();
+        this.str = str;
 
+    }
 
+    public void Initialize(){
         for (int i = 0; i < str.size(); i++){
             if (str.get(i).equals("*") || str.get(i).equals("/") || str.get(i).equals("-") || str.get(i).equals("+")) {
                 while (!stack.isEmpty() && isPrecedence(stack.peek(),str.get(i))){
@@ -26,7 +29,6 @@ public class Calculator {
             postfix.add(stack.pop());
         }
     }
-
     public String calEvaluate (){
         Double result = 0.0;
         Double num1;

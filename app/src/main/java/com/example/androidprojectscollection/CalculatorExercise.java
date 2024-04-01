@@ -271,8 +271,10 @@ public class CalculatorExercise extends AppCompatActivity {
         btnDot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (temp.charAt(temp.length()-1) == '.') {
                     temp = temp.substring(0,temp.length()-1);
+                    txtAnswer.setText(temp);
                     return;
                 }
                 for (int i = 0; i < temp.length(); i++){
@@ -303,6 +305,7 @@ public class CalculatorExercise extends AppCompatActivity {
 
                     temp = "";
                     Calculator cal = new Calculator(equation);
+                    cal.Initialize();
                     temp = cal.calEvaluate();
                     equation.clear();
 
