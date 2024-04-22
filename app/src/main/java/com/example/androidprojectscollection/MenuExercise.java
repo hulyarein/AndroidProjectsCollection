@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
+
 public class MenuExercise extends AppCompatActivity {
     Button btnChanger;
 
@@ -23,7 +25,8 @@ public class MenuExercise extends AppCompatActivity {
         setContentView(R.layout.activity_menu_exercise);
 
         btnChanger = (Button) findViewById(R.id.btnTransformingButton);
-        Drawable image=(Drawable)getResources().getDrawable(R.drawable.a);
+
+
     }
 
     @Override
@@ -39,10 +42,13 @@ public class MenuExercise extends AppCompatActivity {
         if (item.getItemId() == R.id.mItemChange){
             Toast.makeText(this, "Edit Object Item is clicked",Toast.LENGTH_SHORT).show();
         } else if (item.getItemId() == R.id.mItemReset){
+            MaterialButton button = (MaterialButton) btnChanger;
+            button.setCornerRadius(5000);
+            btnChanger.setWidth(50);
+            btnChanger.setHeight(250);
             btnChanger.setBackgroundColor(Color.RED);
             btnChanger.setVisibility(View.VISIBLE);
-            btnChanger.setWidth(400);
-            btnChanger.setHeight(30);
+
             btnChanger.setText("");
             Toast.makeText(this, "Reset Object Item is clicked",Toast.LENGTH_SHORT).show();
         } else if (item.getItemId() == R.id.mItemExit){
@@ -50,11 +56,16 @@ public class MenuExercise extends AppCompatActivity {
         } else if (item.getItemId() == R.id.mbgColor){
             btnChanger.setBackgroundColor(Color.BLACK);
         } else if (item.getItemId() == R.id.mheight){
+            MaterialButton button = (MaterialButton) btnChanger;
+            button.setCornerRadius(0);
             btnChanger.setHeight(500);
         } else if (item.getItemId() == R.id.mwidth) {
+            MaterialButton button = (MaterialButton) btnChanger;
+            button.setCornerRadius(0);
             btnChanger.setWidth(700);
         } else if (item.getItemId() == R.id.mtextColor){
-            btnChanger.setText("Peekabo");
+            btnChanger.setText("Boo");
+            btnChanger.setTextSize(14);
         } else if (item.getItemId() == R.id.mcorner){
             btnChanger.setVisibility(View.GONE);
         }
