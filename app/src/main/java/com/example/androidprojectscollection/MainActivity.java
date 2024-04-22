@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1, btnCon;
+    Button btn1, btnCon, btnPassingIntent, btnMenu;
     Button btn2,btn3, btnCal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +59,27 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+
+        btnPassingIntent = (Button) findViewById(R.id.btnPI);
+        btnPassingIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, PassingIntentsExercise.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnMenu = (Button) findViewById(R.id.btnMenu);
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MenuExercise.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 }

@@ -21,11 +21,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:text="@string/LayoutExercise"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="119dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Menus"
@@ -42,10 +43,10 @@
         android:text="Fragments"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPI" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Passing Intents"
@@ -58,15 +59,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="calculator exercise"
-        app:layout_constraintTop_toBottomOf="@+id/btnButtonExercise"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnButtonExercise" />
 
     <Button
         android:id="@+id/btnButtonExercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button Exercise"
-        app:layout_constraintTop_toBottomOf="@+id/btnLayoutExercise"
-        tools:layout_editor_absoluteX="119dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLayoutExercise" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
